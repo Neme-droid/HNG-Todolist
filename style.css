@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+#todoForm {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#todoForm input,
+#todoForm select,
+#todoForm button {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#todoForm input:focus,
+#todoForm select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52,152,219,0.2);
+}
+
+#todoForm button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#todoForm button:hover {
+    background-color: #2980b9;
+}
+
+#emptyState {
+    text-align: center;
+    padding: 3rem;
+    color: #7f8c8d;
+}
+
+#emptyState p {
+    margin-bottom: 0.5rem;
+}
+
+#taskList {
+    margin-top: 2rem;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+    margin-bottom: 0.75rem;
+    border-left: 4px solid #3498db;
+}
+
+.task-item.completed {
+    opacity: 0.7;
+    border-left-color: #95a5a6;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+}
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.priority-badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.priority-low {
+    background-color: #e8f4fc;
+    color: #3498db;
+}
+
+.priority-medium {
+    background-color: #fcf3e7;
+    color: #f39c12;
+}
+
+.priority-high {
+    background-color: #fdecea;
+    color: #e74c3c;
+}
+
+.due-info {
+    font-size: 0.875rem;
+    color: #7f8c8d;
+    white-space: nowrap;
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    color: #e74c3c;
+    font-size: 1.25rem;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.delete-button:hover {
+    background-color: #fdecea;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    #todoForm {
+        grid-template-columns: 1fr;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .task-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .delete-button {
+        align-self: flex-end;
+    }
+}

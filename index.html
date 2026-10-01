@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donezo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Donezo</h1>
+        <form id="todoForm">
+            <input type="text" id="taskInput" placeholder="What needs to be done?" required>
+            <select id="prioritySelect">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+            <input type="date" id="dateInput">
+            <input type="time" id="timeInput">
+            <button type="submit">Add Task</button>
+        </form>
+        <div id="emptyState">
+            <p>No tasks yet</p>
+            <p>Add a task to get started.</p>
+        </div>
+        <div id="taskList"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
