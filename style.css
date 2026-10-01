@@ -157,6 +157,15 @@ h1 {
     background-color: #fdecea;
 }
 
+/* Extra right padding for priority select */
+#prioritySelect {
+    padding-right: 1.75rem;
+}
+
+/* Spacing between checkbox and task text */
+.task-item > input[type="checkbox"] {
+    margin-right: 10px;
+}
 /* Responsive adjustments */
 @media (max-width: 480px) {
     #todoForm {
