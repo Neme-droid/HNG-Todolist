@@ -157,6 +157,24 @@ h1 {
     background-color: #fdecea;
 }
 
+/* Desktop layout for form */
+@media (min-width: 600px) {
+    #todoForm {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        gap: 0.5rem;
+    }
+}
+
+/* Extra right padding for priority select */
+#prioritySelect {
+    padding-right: 1.75rem;
+}
+
+/* Spacing between checkbox and task text */
+.task-item > input[type="checkbox"] {
+    margin-right: 10px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 480px) {
     #todoForm {
